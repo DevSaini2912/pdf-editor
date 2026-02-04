@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>PDF Editor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,42 +13,60 @@
 
 <h2>📄 PDF Editor</h2>
 
+<!-- CREATE PDF SECTION -->
 <div class="box">
-  <h3>Create PDF</h3>
- <input
-  type="file"
-  id="imgInput"
-  accept="image/*"
-  multiple
-  capture="environment"
-/>
-<button id="createBtn">📄 Create PDF</button>
 
-<div id="choice" style="display:none;">
-  <button id="storageBtn">🖼️ Select from Storage</button>
-  <button id="cameraBtn">📷 Click Image</button>
-</div>
+  <!-- ONLY ONE BUTTON VISIBLE INITIALLY -->
+  <button id="createBtn">📄 Create PDF</button>
 
-<input type="file" id="storageInput" accept="image/*" multiple hidden>
-<input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
-<div id="preview"></div>
-<button id="doneBtn" style="display:none;">✅ Done – Create PDF</button>
+  <!-- CHOICE (HIDDEN INITIALLY) -->
+  <div id="choice" style="display:none;">
+    <button id="storageBtn">🖼️ Select from Storage</button>
+    <button id="cameraBtn">📷 Click Image</button>
+  </div>
+
+  <!-- HIDDEN INPUTS -->
+  <input
+    type="file"
+    id="storageInput"
+    accept="image/*"
+    multiple
+    hidden
+  >
+
+  <input
+    type="file"
+    id="cameraInput"
+    accept="image/*"
+    capture="environment"
+    hidden
+  >
+
+  <!-- IMAGE PREVIEW -->
+  <div id="preview"></div>
+
+  <!-- FINAL DONE BUTTON -->
+  <button id="doneBtn" style="display:none;">
+    ✅ Done – Create PDF
+  </button>
+
 </div>
 
 <hr>
 
+<!-- EDIT PDF (FOR LATER, NOT USED YET) -->
 <div class="box">
-  <h3>Edit PDF</h3>
+  <h3>Edit PDF (Coming Soon)</h3>
   <input type="file" id="pdfInput" accept="application/pdf">
   <div id="pages"></div>
 </div>
 
+<!-- LIBRARIES -->
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 <script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
+
+<!-- YOUR SCRIPT -->
 <script src="script.js"></script>
 
 </body>
 </html>
-
-
-
