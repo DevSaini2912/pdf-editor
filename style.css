@@ -1,19 +1,22 @@
-body {
-  font-family: Arial;
-  padding: 10px;
-}
-
-.box {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-#preview img {
+.thumb {
   width: 100px;
   margin: 5px;
   border: 1px solid #000;
 }
 
-button {
-  margin-top: 5px;
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.modal img {
+  max-width: 90%;
+  max-height: 70vh;
+  background: white;
+}
+
