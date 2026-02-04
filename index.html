@@ -14,7 +14,14 @@
 
 <div class="box">
   <h3>Create PDF</h3>
-  <input type="file" id="imgInput" multiple accept="image/*">
+ <input
+  type="file"
+  id="imgInput"
+  accept="image/*"
+  multiple
+  capture="environment"
+/>
+
   <button onclick="createPDF()">Create PDF</button>
   <div id="preview"></div>
 </div>
@@ -33,3 +40,4 @@
 
 </body>
 </html>
+
