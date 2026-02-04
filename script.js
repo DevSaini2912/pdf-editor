@@ -30,7 +30,7 @@ storageInput.onchange = cameraInput.onchange = e => {
 
   choice.style.display = "none";
   addMoreBtn.style.display = "inline-block";
-  doneBtn.style.display = "inline-block";
+  doneBtn.style.display = "block";
 
   // allow selecting same file again
   e.target.value = "";
@@ -98,7 +98,6 @@ doneBtn.onclick = async () => {
   for (let file of images) {
     const bytes = await file.arrayBuffer();
 
-    // SAFELY embed image (jpg/png)
     let pdfImg;
     try {
       pdfImg = await pdfDoc.embedJpg(bytes);
@@ -134,3 +133,4 @@ function download(bytes, name) {
   link.download = name;
   link.click();
 }
+
