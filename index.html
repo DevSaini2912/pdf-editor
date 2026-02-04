@@ -22,8 +22,25 @@
   capture="environment"
 />
 
-  <button onclick="createPDF()">Create PDF</button>
-  <div id="preview"></div>
+  <button onclick="startCreatePDF()">📄 Create PDF</button>
+  <input
+  type="file"
+  id="cameraInput"
+  accept="image/*"
+  capture="environment"
+  hidden
+/>
+
+<input
+  type="file"
+  id="storageInput"
+  accept="image/*"
+  multiple
+  hidden
+/>
+
+<div id="preview"></div>
+
 </div>
 
 <hr>
@@ -40,4 +57,5 @@
 
 </body>
 </html>
+
 
