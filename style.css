@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+  padding: 10px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#preview img {
+  width: 100px;
+  margin: 5px;
+  border: 1px solid #000;
+}
+
+button {
+  margin-top: 5px;
+}

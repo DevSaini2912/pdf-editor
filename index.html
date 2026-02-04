@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css">
+</head>
+
+<body>
+
+<h2>📄 PDF Editor</h2>
+
+<div class="box">
+  <h3>Create PDF</h3>
+  <input type="file" id="imgInput" multiple accept="image/*">
+  <button onclick="createPDF()">Create PDF</button>
+  <div id="preview"></div>
+</div>
+
+<hr>
+
+<div class="box">
+  <h3>Edit PDF</h3>
+  <input type="file" id="pdfInput" accept="application/pdf">
+  <div id="pages"></div>
+</div>
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
