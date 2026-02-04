@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 16px;
+  padding: 16px 16px 90px; /* space for fixed Done button */
   font-family: Arial, Helvetica, sans-serif;
   background: #f5f5f5;
   color: #222;
@@ -41,9 +41,25 @@ button:hover {
   background: #15803d;
 }
 
-/* Done button */
+/* Add more button */
+#addMoreBtn {
+  background: #0d9488;
+}
+
+#addMoreBtn:hover {
+  background: #0f766e;
+}
+
+/* DONE BUTTON – FIXED AT BOTTOM */
 #doneBtn {
   background: #dc2626;
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 360px;
+  z-index: 900;
 }
 
 #doneBtn:hover {
@@ -58,13 +74,14 @@ button:hover {
   justify-content: center;
 }
 
+/* Thumbnails */
 #preview img {
   width: 90px;
   height: 120px;
   object-fit: cover;
   margin: 6px;
   border: 2px solid #333;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   background: #fff;
 }
@@ -73,7 +90,7 @@ button:hover {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1000;
 
   display: flex;
@@ -86,14 +103,18 @@ button:hover {
 /* Image inside crop modal */
 .modal img {
   max-width: 95%;
-  max-height: 70vh;
+  max-height: 60vh;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* Crop save button inside modal */
 .modal button {
-  margin-top: 12px;
+  margin-top: 14px;
+  padding: 14px;
+  width: 90%;
+  max-width: 320px;
+  font-size: 17px;
   background: #22c55e;
 }
 
@@ -103,13 +124,8 @@ button:hover {
 
 /* Mobile tweaks */
 @media (max-width: 600px) {
-  #preview img {
-    width: 90px;
-  }
-
   button {
     width: 90%;
     max-width: 320px;
   }
 }
-
