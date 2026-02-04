@@ -59,12 +59,12 @@ button:hover {
 }
 
 #preview img {
-  width: 100px;
-  height: auto;
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
   margin: 6px;
   border: 2px solid #333;
   border-radius: 4px;
-  object-fit: cover;
   cursor: pointer;
   background: #fff;
 }
@@ -112,3 +112,4 @@ button:hover {
     max-width: 320px;
   }
 }
+
