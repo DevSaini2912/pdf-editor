@@ -21,26 +21,17 @@
   multiple
   capture="environment"
 />
+<button id="createBtn">📄 Create PDF</button>
 
-  <button onclick="startCreatePDF()">📄 Create PDF</button>
-  <input
-  type="file"
-  id="cameraInput"
-  accept="image/*"
-  capture="environment"
-  hidden
-/>
+<div id="choice" style="display:none;">
+  <button id="storageBtn">🖼️ Select from Storage</button>
+  <button id="cameraBtn">📷 Click Image</button>
+</div>
 
-<input
-  type="file"
-  id="storageInput"
-  accept="image/*"
-  multiple
-  hidden
-/>
-
+<input type="file" id="storageInput" accept="image/*" multiple hidden>
+<input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
 <div id="preview"></div>
-
+<button id="doneBtn" style="display:none;">✅ Done – Create PDF</button>
 </div>
 
 <hr>
@@ -57,5 +48,6 @@
 
 </body>
 </html>
+
 
 
